@@ -1,0 +1,28 @@
+
+1.
+Tera Data 
+----------------------------
+host - 10.58.0.66
+user - td_user1
+password- td_user1
+
+2.
+PostgreSQL
+----------------------------
+host - localhost 	
+user - postgres
+password - qwerty
+
+3.
+snowflake
+--------------------------------
+account='ft50685.ap-south-1',
+user= 'VANSHU18', p
+assword='Vanshu1869'
+
+4.
+Azure blob
+-----------------------------------
+conn_str = "DefaultEndpointsProtocol=https;AccountName=vanshika18;AccountKey=wHGK4zLZQIQYhvFysDMCYngoqZtbP51UNFjZkY5jGXXS6D6Cf79w15w1RCIlvohDe6346LN7q3xF2YlebIVdUg==;EndpointSuffix=core.windows.net"
+container = "files"
+blob_name = "test2.csv"

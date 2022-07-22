@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>Report</title>
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+	  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js02.9.4/dist/Chart.min.js"></script>
+    <!-- <script>
+      var graph = {{plot | safe}};
+      Plotly.plot('chart', graph, {});
+    </script> -->
+
+    <script>
+      //GOOGLE SEARCH
+      //Enter domain of site to search
+      var domainroot="google.com"
+      function Gsitesearch(curobj){
+      // curobj.q.value="site:"+domainroot+" "+curobj.qfront.value
+      curobj.q.value=curobj.qfront.value
+      }
+      </script>
+      
+      <style>
+
+          /* .sidebar {
+            height: 100%;
+            width: 30px;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            
+          } */
+            /* overflow-x: hidden; */
+            /* padding-top: 16px;
+            overflow: auto; */ 
+            /* margin-top: 80px;
+           */
+          
+          .main {
+            
+            /* padding: 0px 20px; */
+            margin-top: 20px;
+            margin-right: 10px;
+          }
+          /* @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+          } */
+            </style>
+            </style>
+
+    <script>
+      //GOOGLE SEARCH
+      //Enter domain of site to search
+      var domainroot="google.com"
+      function Gsitesearch(curobj){
+      // curobj.q.value="site:"+domainroot+" "+curobj.qfront.value
+        curobj.q.value=curobj.qfront.value
+      }
+    </script>
+            
+    </head>
+    <body height=100%>
+      <nav class="navbar navbar-fixed-top" style="background-color: #0754a1;overflow: auto;">
+        <div class="container-fluid">
+          <a class="brand-logo"><img src='https://sso.capgemini.com/opensso/XUI/images/cg_logo_main.png' width="220px" height="60px"></a>
+          <a class="navbar-brand" style="color: white; font-size: 30px;">Data Validation</a>
+          <form class="d-flex" action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)" style="margin-top: 14px;margin-bottom: 14px; ">
+            <input name="q" type="hidden" />
+            <input name="qfront" type="search" required class="searchField" placeholder="Search" maxlength="50"/>
+            <input type="submit" class="btn btn-outline-success" value="SEARCH" />
+            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue;">
+            <button class="btn btn-outline-success" type="submit" > Search </button> -->
+          </form> 
+        </div>
+      </nav>
+      
+      <!--Lower Content-->
+      
+      <div  class="main">
+        <a><img src='data:image/jpeg;base64,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'  
+            onclick="window.location.href='/'" style="border-radius: 50%;cursor: pointer; margin-left: 10px;" width="40px" height="40px" style="margin-top: 10px;" ><span style="margin-left: 10px; font-size: 20px;color: #0e67af"><strong>Back to Testing</strong></span></a>
+        <!-- <button>back to Testing</button> -->
+        <p style="font-size: 25px;margin-top: 20px;margin-left: 12px;color: #0e67af;"><strong> Custom Query Excecuted Successfully</strong></p>
+      
+          <!-- {% for data in listt %}
+                  <p style="margin-left: 20px;"><strong style="font-size: 20px; margin-left: 2px;">{{data|safe}}</strong></p>
+          {% endfor %} -->
+
+          <br>
+          <p style="font-size: 25px;color:whitesmoke; background-color: #0e67af;padding-left: 12px;">Download a File</p>
+          <p style="margin-left: 12px;color: #0e67af;">To see the result , please Download the File.</p>
+        <p>
+          <a href="{{ url_for('.download_file_zip') }}"><img style="margin-left: 10px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8H8GeNQMdi6STAsFqCAhxPjeXzhUvTMVgO9sCLEuEl-EeAD_-xxCDeNA5Hp-KoEM26Cg&usqp=CAU" width="200px"></a>
+        </p>
+    
+</body>
+
+      
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+<!--        .text {height: 100px;-->
+<!--  line-height: 100px;-->
+<!--  vertical-align: middle;-->
+<!--  color: white;-->
+<!--  margin-top: 20%;-->
+<!--  font-size: 50px;-->
+<!--  }-->
+.text {
+margin-top: 15%;
+top: 300px;
+left: 183px;
+width: 300px;
+height: 170px;
+text-align: left;
+font: normal normal medium 60px/67px Ubuntu;
+letter-spacing: 0px;
+text-transform: uppercase;
+opacity: 1;
+}
+    .closebtn {
+                        margin-left: 15px;
+                        color: black;
+                        font-weight: bold;
+                        float: right;
+                        font-size: 22px;
+                        line-height: 20px;
+                        cursor: pointer;
+                        transition: 0.3s;
+                      }
+
+                      .closebtn:hover {
+                        color: black;
+                      }
+
+                      body {
+
+                          background-image:url('static/Landing-page.jpg');
+                          background-size: cover;
+                          background-repeat: no-repeat;
+                          background-attachment: fixed;background-size: 100% 100%;"
+                        }
+                        #msg{
+                 background: #272936 0% 0% no-repeat padding-box;
+                        border: 1px dashed #E4E4E4;
+                        border-radius: 17px 17px 17px 17px;
+                        opacity: 0.75;
+                         color: #ECECEC;
+                         font-family: Ubuntu;
+                         letter-spacing: 0px;
+                         margin-left:20px;
+                         margin-right:20px;
+                         padding: 10px;}-
+    </style>
+</head>
+<body >
+
+{% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  {% for message in messages %}
+                    {% if message=='Please log in to access this page.' %}
+                                <p></p>
+                    {%else%}
+                        <p id="msg" class="blink_me">
+                      <strong>{{ message }}</strong><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span></p>
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+              {% endwith %}
+<div style="margin-left: 30px;">
+    <h1 class="text" ><span style="color:#FFFFFF">Data Validation</span> <span style="color:#07A9A7">Engine</span> </h1>
+    <p style="margin-top:-50px;font-family:Ubuntu; font-size: 20px;">
+        <a style = "color: rgb(79, 132, 211);cursor: pointer;" href="{{ url_for('login') }}">Login / </a>
+        <a style = "color: rgb(79, 132, 211);cursor: pointer;" href="{{ url_for('signup') }}">Register</a> <span style="color: #FFFFFF;">to continue...</span></p>
+
+</div>
+
+
+</body>
+</html>

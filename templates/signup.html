@@ -1,0 +1,94 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .text {height: 100px;
+  line-height: 100px;
+  vertical-align: middle;
+  color: white;
+  margin-top: 20%;
+  font-size: 50px;
+  }
+    .closebtn {
+                        margin-left: 15px;
+                        color: black;
+                        font-weight: bold;
+                        float: right;
+                        font-size: 22px;
+                        line-height: 20px;
+                        cursor: pointer;
+                        transition: 0.3s;
+                      }
+
+                      .closebtn:hover {
+                        color: black;
+                      }
+                       body {
+
+                          background-image:url('static/Other-pages.jpg');
+                          background-size: cover;
+                          background-repeat: no-repeat;
+                          background-attachment: fixed;background-size: 100% 100%;"
+                        }
+                        #loginform{
+                        background: #272936 0% 0% no-repeat padding-box;
+                        border: 1px dashed #E4E4E4;
+                        border-radius: 17px 17px 17px 17px;
+                        opacity: 0.75;
+                         color: #ECECEC;
+                         font-family: Ubuntu;
+                         letter-spacing: 0px;
+                        }
+                        #msg{
+                         background: #272936 0% 0% no-repeat padding-box;
+                        border: 1px dashed #E4E4E4;
+                        border-radius: 17px 17px 17px 17px;
+                        opacity: 0.75;
+                         color: #ECECEC;
+                         font-family: Ubuntu;
+                         letter-spacing: 0px;
+                         margin-left:20px;
+                         margin-right:20px;
+                         padding: 10px;}
+    </style>
+</head>
+<body>
+<!--{% extends "bootstrap/base.html" %}-->
+<!--{% import "bootstrap/wtf.html" as wtf %}-->
+
+<!--{% block title %}-->
+<!--Sign Up-->
+<!--{% endblock %}-->
+
+<!--{% block styles %}-->
+<!--{{super()}}-->
+<p></p>
+{% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  {% for message in messages %}
+                    <p id="msg" class="blink_me">
+
+                      <strong>{{ message }}</strong><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span></p>
+                  {% endfor %}
+                {% endif %}
+              {% endwith %}
+<br><br>
+<div class="col-sm-3 col-md-offset-4"  id ="loginform" >
+
+    <form action="/signup" class="form-signin" method="POST">
+        <h2 class="form-signin-heading">Sign Up</h2>
+        {{ form.hidden_tag() }}
+        {{ wtf.form_field(form.username) }}
+        {{ wtf.form_field(form.email) }}
+        {{ wtf.form_field(form.password) }}
+        <button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color:#00B2A2;">Sign Up</button>
+        <br>
+        <br>
+    </form>
+
+</div> <!-- /container -->
+{% endblock %}
+</body>
+</html>
